@@ -2,18 +2,18 @@ package edu.kis.vh.nursery;
 
 public class HanoiRhymer extends defaultCountingOutRhymer {
 <<<<<<< HEAD
-    int totalRejected = 0;
+    int totalRejecteds = 0;
 =======
 
     int totalRejected = 0;
 
 >>>>>>> format
     public int reportRejected() {
-        return totalRejected;
+        return totalRejecteds;
     }
     public void countIn(int in) {
         if (!callCheck() && in > peekaboo())
-            totalRejected++;
+            totalRejecteds++;
 <<<<<<< HEAD
     else
         super.countIn(in);
