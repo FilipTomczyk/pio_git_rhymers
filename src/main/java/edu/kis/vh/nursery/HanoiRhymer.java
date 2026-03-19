@@ -1,0 +1,25 @@
+package edu.kis.vh.nursery;
+
+import static sun.util.locale.LocaleUtils.isEmpty;
+
+public class HanoiRhymer extends DefaultCountingOutRhymer {
+
+    private int totalRejected = 0;
+
+    public int getTotalRejected() {
+        return totalRejected;
+    }
+
+
+
+    public int reportRejected() {
+        return totalRejected;
+    }
+
+    public void countIn(int in) {
+        if (!isEmpty() && in > peekaboo())
+            totalRejected++;
+        else
+            super.countIn(in);
+    }
+}
