@@ -1,6 +1,7 @@
 
 package edu.kis.vh.nursery.list;
 
+
 public class IntLinkedList {
 
     public static final int EMPTY_INDICATOR = -1;
@@ -42,7 +43,7 @@ public class IntLinkedList {
     }
 
     public int getI() {
-        return i;
+        return i; // TODO: ponieważ pole i nie jest używane — ta metoda też jest zbędna.
     }
 
     public void push(int i) {
