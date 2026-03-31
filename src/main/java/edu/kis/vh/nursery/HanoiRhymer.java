@@ -1,8 +1,16 @@
 package edu.kis.vh.nursery;
 
+import static sun.util.locale.LocaleUtils.isEmpty;
+
 public class HanoiRhymer extends DefaultCountingOutRhymer {
 
-    private int totalRejected = 0;
+    private static final int INITIAL_REJECTED_VALUE = 0;
+
+    private int totalRejected = INITIAL_REJECTED_VALUE;
+
+    public int getTotalRejected() {
+        return totalRejected;
+    }
 
     public int reportRejected() {
         return totalRejected;
@@ -10,10 +18,9 @@ public class HanoiRhymer extends DefaultCountingOutRhymer {
 
     @Override
     public void countIn(int in) {
-        if (!callCheck() && in > peekaboo()) {
+        if (!isEmpty() && in > peekaboo())
             totalRejected++;
-        } else {
+        else
             super.countIn(in);
-        }
     }
 }

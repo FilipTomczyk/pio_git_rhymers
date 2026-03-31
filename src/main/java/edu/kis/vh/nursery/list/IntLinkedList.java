@@ -78,4 +78,5 @@ public class IntLinkedList {
         last = last.getPrev();
         return ret;
     }
+
 }

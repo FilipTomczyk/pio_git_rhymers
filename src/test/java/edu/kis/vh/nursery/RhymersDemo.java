@@ -82,4 +82,5 @@ public class RhymersDemo {
     private static void printHanoiRejected(HanoiRhymer hanoi) {
         System.out.println("total rejected is " + hanoi.reportRejected());
     }
+    
 }
