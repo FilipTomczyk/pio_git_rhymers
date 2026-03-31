@@ -3,6 +3,10 @@ package edu.kis.vh.nursery;
 import org.junit.Assert;
 import org.junit.Test;
 
+// Walidacja zadania 15:
+// Testy jednostkowe przechodzą poprawnie.
+// Nie było potrzeby modyfikacji testów ani projektu – kod jest zgodny z wymaganiami
+
 public class RhymersJUnitTest {
 
     @Test
