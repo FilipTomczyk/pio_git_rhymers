@@ -1,21 +1,50 @@
+
 package edu.kis.vh.nursery.list;
+
 
 public class IntLinkedList {
 
     public static final int EMPTY_INDICATOR = -1;
+    private class Node {
+        private int value;
+        private Node next;
+        private Node prev;
+
+        public Node(int value) {
+            this.value = value;
+        }
+
+        public int getValue() {
+            return value;
+        }
+
+        public Node getNext() {
+            return next;
+        }
+
+        public Node getPrev() {
+            return prev;
+        }
+
+        public void setNext(Node next) {
+            this.next = next;
+        }
+
+        public void setPrev(Node prev) {
+            this.prev = prev;
+        }
+    }
+
+    private Node last;
+    private int i;
 
     public Node getLast() {
         return last;
     }
 
-    private Node last;
-
     public int getI() {
-        return i;
+        return i; // TODO: ponieważ pole i nie jest używane — ta metoda też jest zbędna.
     }
-
-
-    private int i;
 
     public void push(int i) {
         if (last == null)
@@ -44,6 +73,7 @@ public class IntLinkedList {
     public int pop() {
         if (isEmpty())
             return EMPTY_INDICATOR;
+
         int ret = last.getValue();
         last = last.getPrev();
         return ret;
